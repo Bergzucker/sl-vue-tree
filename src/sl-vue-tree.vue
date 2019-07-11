@@ -95,7 +95,9 @@
             @dragover.prevent
         >
 
-          <slot name="grab"></slot>
+          <template slot="grab">
+            <slot name="grab"></slot>
+          </template>
           
           <template slot="title" slot-scope="{ node }">
             <slot name="title" :node="node">{{ node.title }}</slot>
