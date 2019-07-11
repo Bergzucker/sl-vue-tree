@@ -9,8 +9,7 @@
     "clear": "rimraf dist",
     "build": "npm run clear && webpack-cli --progress --mode production",
     "start": "npm run clear && webpack-cli --watch --progress --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "vue",
