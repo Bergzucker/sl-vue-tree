@@ -31,7 +31,6 @@
             @contextmenu="emitNodeContextmenu(node, $event)"
             @dblclick="emitNodeDblclick(node, $event)"
             @click="emitNodeClick(node, $event)"
-            @dragover="onExternalDragoverHandler(node, $event)"
             @drop="onExternalDropHandler(node, $event)"
             :path="node.pathStr"
             :class="{
@@ -47,6 +46,8 @@
             'sl-vue-tree-node-is-folder' : !node.isLeaf
           }"
         >
+          <slot name="grab"></slot>
+
           <div class="sl-vue-tree-gap" v-for="gapInd in gaps"></div>
 
           <div class="sl-vue-tree-branch" v-if="level && showBranches">
