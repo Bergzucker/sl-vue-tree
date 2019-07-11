@@ -94,6 +94,9 @@
             :showBranches="showBranches"
             @dragover.prevent
         >
+
+          <slot name="grab"></slot>
+          
           <template slot="title" slot-scope="{ node }">
             <slot name="title" :node="node">{{ node.title }}</slot>
           </template>
